@@ -5,5 +5,5 @@
 -- convert input string to lower case and cast to text data type 
 -- https://duckdb.org/docs/stable/sql/expressions/cast.html
 -- https://duckdb.org/docs/stable/sql/data_types/text
-'{{ input_string | lower }}'::varchar
+lower('{{ input_string }}')::varchar
 {%- endmacro -%}

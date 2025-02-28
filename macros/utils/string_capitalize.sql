@@ -5,5 +5,12 @@
 -- cast to text data type 
 -- https://duckdb.org/docs/stable/sql/expressions/cast.html
 -- https://duckdb.org/docs/stable/sql/data_types/text
-'{{ input_string | capitalize }}'::varchar
+concat(
+    upper(
+        substr('{{ input_string }}', 1, 1)
+        )
+    , lower(
+        substr('{{ input_string }}', 2)
+        )
+    )::varchar
 {%- endmacro -%}
