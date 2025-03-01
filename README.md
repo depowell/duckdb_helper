@@ -6,6 +6,19 @@ Try running the following commands:
 - dbt run
 - dbt test
 
+### Using `uv` to Install and Sync Requirements
+
+To manage and synchronize your project dependencies, you can use `uv`. Follow these steps:
+
+1. **Install `uv`**:
+   ```sh
+   pip install uv
+   ```
+2. **Sync** your environment with the `pyproject.toml` file:
+
+  ```sh
+  uv sync
+  ```
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
