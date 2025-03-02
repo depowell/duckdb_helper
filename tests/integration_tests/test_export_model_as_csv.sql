@@ -10,7 +10,7 @@ original_data as (
 ),
 exported_csv as (
     select *
-    from read_csv_auto('./integration_test_export_csv.csv')
+    from read_csv('./integration_test_export_csv.csv')
 )
 
 select 
