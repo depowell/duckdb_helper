@@ -1,6 +1,6 @@
 {{ config(
     post_hook=[
-      "{{ copy_to_json(this, './integration_test_copy_to_json.json') }}"
+      "{{ copy_to_file(this, './integration_test_copy_to_json.json', 'JSON') }}"
     ],
     tags=['integration_tests']
 ) }}

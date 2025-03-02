@@ -1,6 +1,6 @@
 {{ config(
     post_hook=[
-      "{{ copy_to_parquet(this, './integration_test_copy_to_parquet.parquet') }}"
+      "{{ copy_to_file(this, './integration_test_copy_to_parquet.parquet', 'PARQUET') }}"
     ],
     tags=['integration_tests']
 ) }}

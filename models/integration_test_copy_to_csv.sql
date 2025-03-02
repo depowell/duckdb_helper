@@ -1,6 +1,6 @@
 {{ config(
     post_hook=[
-      "{{ copy_to_csv(this, './integration_test_copy_to_csv.csv') }}"
+      "{{ copy_to_file(model_name=this, file_path='./integration_test_copy_to_csv.csv', file_type='CSV') }}"    
     ],
     tags=['integration_tests']
 ) }}

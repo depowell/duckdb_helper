@@ -1,4 +1,4 @@
--- # test macros\export\copy_to_csv.sql
+-- # test macros\export\copy_to_file.sql
 {{ config(
     tags=['integration_tests']
 ) }}
