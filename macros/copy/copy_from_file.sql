@@ -1,4 +1,4 @@
--- macros/copy_from_file.sql
+-- macros/copy/copy_from_file.sql
 -- purpose: copy data from a file into a table model
 -- parameters:
 --   - model_name: name of the model to copy data into

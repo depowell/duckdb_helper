@@ -1,4 +1,4 @@
--- macros/copy_to_file.sql
+-- macros/copy/copy_to_file.sql
 -- purpose: copy data from a model to a file
 -- parameters:
 --   - model_name: name of the model to copy data from
