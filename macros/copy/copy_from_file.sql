@@ -1,4 +1,22 @@
 -- macros/copy_from_file.sql
+-- purpose: copy data from a file into a table model
+-- parameters:
+--   - model_name: name of the model to copy data into
+--   - file_path: path to the file to copy data from
+--   - file_type: type of the file to copy data from
+-- supported file types: JSON, CSV, PARQUET
+-- usage example:
+  -- {{ config(
+  --     materialized='table',
+  --     post_hook=[
+  --       """{{ copy_from_file(
+  --       model_name=this,
+  --       file_path='./filename.csv',
+  --       file_type='CSV') }}"""
+  --     ]
+  -- ) }}
+  -- -- use manual file schema, until we have a way to infer.
+  -- select 4 as id, 'rockmelon' as fruit where false
 {% macro copy_from_file(model_name, file_path, file_type) %}
 -- file_type must be in supported types
 {% if file_type not in ['JSON', 'CSV', 'PARQUET'] %}
