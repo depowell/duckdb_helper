@@ -4,4 +4,5 @@ dbt_packages/
 logs/
 *.csv
 *.parquet
+*.json
 uv.lock
