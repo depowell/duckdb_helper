@@ -1,4 +1,4 @@
--- # test macros\export\export_model_as_parquet.sql
+-- # test macros\export\copy_to_parquet.sql
 {{ config(
     tags=['integration_tests']
 ) }}
@@ -6,11 +6,11 @@
 with
 original_data as (
     select *
-    from {{ ref('integration_test_export_parquet') }}
+    from {{ ref('integration_test_copy_to_parquet') }}
 ),
 exported_parquet as (
     select *
-    from read_parquet('./integration_test_export_parquet.parquet')
+    from read_parquet('./integration_test_copy_to_parquet.parquet')
 )
 
 select 

@@ -1,6 +1,6 @@
 {{ config(
     post_hook=[
-      "{{ export_model_as_parquet(this, './integration_test_export_parquet.parquet') }}"
+      "{{ copy_to_csv(this, './integration_test_copy_to_csv.csv') }}"
     ],
     tags=['integration_tests']
 ) }}

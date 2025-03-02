@@ -2,7 +2,7 @@
 {{
     config(
         post_hook="""
-            {{ export_model_as_csv(this, './demo_date_spline.csv')}}
+            {{ copy_to_csv(this, './demo_date_spline.csv')}}
         """
     )
 }}

@@ -1,4 +1,4 @@
--- # test macros\export\export_model_as_csv.sql
+-- # test macros\export\copy_to_csv.sql
 {{ config(
     tags=['integration_tests']
 ) }}
@@ -6,11 +6,11 @@
 with
 original_data as (
     select *
-    from {{ ref('integration_test_export_csv') }}
+    from {{ ref('integration_test_copy_to_csv') }}
 ),
 exported_csv as (
     select *
-    from read_csv('./integration_test_export_csv.csv')
+    from read_csv('./integration_test_copy_to_csv.csv')
 )
 
 select 
