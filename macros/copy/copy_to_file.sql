@@ -29,5 +29,9 @@
 copy (
   select * from {{ model_name }}
 ) to '{{ file_path }}'
-( format {{ file_type }} );
+  {% if file_type == 'JSON' %}
+    ( format {{ file_type }}, array true);
+  {% else %}
+    ( format {{ file_type }} );
+  {% endif %}
 {% endmacro %}

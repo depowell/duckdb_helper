@@ -1,6 +1,6 @@
 {{ config(
     post_hook=[
-      "{{ copy_to_file(this, './integration_test_copy_to_json.json', 'JSON') }}"
+      "{{ duckdb_helper.copy_to_file(model_name=this, file_path='./data.csv', file_type='CSV') }}"    
     ],
     tags=['integration_tests']
 ) }}

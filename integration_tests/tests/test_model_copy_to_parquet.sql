@@ -10,7 +10,7 @@ original_data as (
 ),
 exported_parquet as (
     select *
-    from read_parquet('./integration_test_copy_to_parquet.parquet')
+    from read_parquet('./data.parquet')
 )
 
 select 

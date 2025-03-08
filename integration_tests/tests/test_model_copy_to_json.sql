@@ -10,7 +10,7 @@ original_data as (
 ),
 exported_json as (
     select *
-    from read_json('./integration_test_copy_to_json.json')
+    from read_json_auto('./data.json')
 )
 
 select 

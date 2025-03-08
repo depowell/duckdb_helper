@@ -1,6 +1,6 @@
 {{ config(
     post_hook=[
-      "{{ copy_to_file(this, './integration_test_copy_to_parquet.parquet', 'PARQUET') }}"
+      "{{ duckdb_helper.copy_to_file(this, './data.json', 'JSON') }}"
     ],
     tags=['integration_tests']
 ) }}

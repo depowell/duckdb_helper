@@ -27,5 +27,9 @@
 -- Now execute the copy command using the model table name
 copy {{ table_name }}
 from '{{ file_path }}'
-( format {{ file_type }} );
+  {% if file_type == 'JSON' %}
+    ( format JSON, array true );
+  {% else %}
+    ( format {{ file_type }} );
+  {% endif %}
 {% endmacro %}
