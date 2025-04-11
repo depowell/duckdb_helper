@@ -46,3 +46,9 @@ where
     -- or a date in `actual_values` but not in `expected_values` (extra date).
     actual_values.date_at is null 
     or expected_values.date_at is null
+
+
+
+
+datetime_hour, masked_id, score, model, site_id, cell_id, h3_6, h3_7, h3_8
+'2025-01-01 00:00:00', 123123, 0.50, 'cnx voice', 123, 333, 1, 'hex7676', 'hex7676'

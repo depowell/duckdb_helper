@@ -16,7 +16,8 @@
   --     ]
   -- ) }}
   -- -- use manual file schema, until we have a way to infer.
-  -- select 4 as id, 'rockmelon' as fruit where false
+  -- select 4 as id, 'rockmelon' as fruit where false 
+  
 {% macro copy_from_file(model_name, file_path, file_type) %}
 -- file_type must be in supported types
 {% if file_type not in ['JSON', 'CSV', 'PARQUET'] %}

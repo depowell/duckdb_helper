@@ -1,0 +1,26 @@
+version: 2
+macros:
+  - name: copy_to_file
+    description: "Macro to copy data to a file."
+    arguments:
+      - name: file_path
+        type: string
+        description: "Path of the file where data will be copied."
+      - name: data
+        type: any
+        description: "Data to be copied to the file."
+  - name: copy_from_file
+    description: "Macro to copy data from a file."
+    arguments:
+      - name: file_path
+        type: string
+        description: "Path of the file from which data will be read."
+      - name: data_type
+        type: string
+        description: "Type of data to be copied."
+  - name: date_spline_extended
+    description: "Macro to create a date spline."
+    arguments:
+      - name: start_val
+        type: date
+        description: "start date"

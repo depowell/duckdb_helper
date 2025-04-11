@@ -5,11 +5,13 @@
 name: 'duckdb_helper'
 version: '0.1.0'
 # This prevents compatibility issues with older or newer versions.
-require-dbt-version: [">=1.9.0", "<2.0.0"] 
+require-dbt-version: [">1.9.0", "<2.0.0"] 
 
 # This setting configures which "profile" dbt uses for this project.
 profile: 'duckdb_helper'
 
+flags:
+  validate_macro_args: True
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!

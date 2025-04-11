@@ -21,6 +21,7 @@
   --     (2, 'banana'),
   --     (3, 'cherry')
   -- ) as t(id, fruit)
+  
 {% macro copy_to_file(model_name, file_path, file_type) %}
 -- file_type must be in supported types
 {% if file_type not in ['JSON', 'CSV', 'PARQUET'] %}

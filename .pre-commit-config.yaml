@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: validate-macro-docs
+        name: Validate DBT Macro Documentation
+        entry: python checks/validate_macro_docs.py
+        language: python
+        pass_filenames: false  # Add this line to run hook without file filtering.
+        types: [sql, yaml]
